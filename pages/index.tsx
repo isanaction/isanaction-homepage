@@ -1,63 +1,70 @@
-import { Avatar, Box, Center, Container, Flex, HStack, Image, VStack } from '@chakra-ui/react'
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { Box, Center, Container, HStack, Image, VStack } from '@chakra-ui/react'
 import Twitter from '../assets/icons/twitter.png'
 import Github from '../assets/icons/github.png'
 import Facebook from '../assets/icons/facebook.png'
+import MyImage from '../assets/img/myImage.jpg'
 
 const IndexPage = () => (
   <Container height={"90vh"} display={'flex'} alignItems={'center'}>
-
-
-    <Box h={500} shadow={'md'} border={'1px'} borderColor={'gray.100'} width={'400px'} justifyContent='center' mx={'auto'} bg='white' p={5}>
-
-      <Center p={5}>
-
+    <Box h={400} shadow={'md'} border={'1px'} borderColor={'gray.100'} width={'340px'} justifyContent='center' mx={'auto'} bg='white' p={5}>
+      <Center pt={5} >
         <Image
           borderRadius='full'
-          boxSize='200px'
-          src='https://bit.ly/dan-abramov'
-          alt='Dan Abramov'
+          boxSize='150px'
+          src={MyImage.src}
+          alt='Isana Koto'
+          objectFit={'cover'}
         />
 
       </Center>
       <VStack
-        // divider={<StackDivider borderColor='gray.200' />}
         spacing={4}
-        p={4}
+        p={5}
         align='stretch'
       >
-        <Box h='40px' fontWeight='bold'>
-          Isana Koto
+        <Box>
+          <Box fontWeight='bold' fontSize="xl">
+            🐳 Isana Koto
+          </Box>
+          <Box>
+            💻 Webエンジニア
+            (React,firebase,Laravel,etc)
+          </Box>
         </Box>
-        <Box h='40px'>
-          web developer
-        </Box>
-        <Box h='40px'>
-          3
+
+        <Box h='30px' fontSize={"sm"}>
+          インディでオルタナティブに暮らしたい
         </Box>
       </VStack>
       <HStack spacing='24px' justifyContent={'center'}>
-        <Image
-          borderRadius='full'
-          w='30px'
-          h='30px'
-          src={Github.src}
-          alt="Github"
-        />
-        <Image
-          w='30px'
-          h='30px'
-          src={Twitter.src}
-          alt='Twitter'
-        />
-        <Image
-          borderRadius='full'
-          w='30px'
-          h='30px'
-          src={Facebook.src}
-          alt='Facebook'
-        />
+        <a href="https://github.com/isanaction" >
+          <Image
+            borderRadius='full'
+            w='30px'
+            h='30px'
+            src={Github.src}
+            alt="Github"
+          />
+        </a>
+        {/* <a href="https://github.com/isanaction" >
+          <Image
+            w='30px'
+            h='30px'
+            src={Twitter.src}
+            alt='Twitter'
+          />
+        </a> */}
+        <a href="https://www.facebook.com/isn.kumano/" >
+          <Image
+            borderRadius='full'
+            w='30px'
+            h='30px'
+            src={Facebook.src}
+            alt='Facebook'
+          />
+        </a>
+
+
       </HStack>
 
     </Box>

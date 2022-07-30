@@ -1,16 +1,15 @@
+import { Box, Container } from '@chakra-ui/react'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 
 const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
-  </Layout>
+  <>
+    <Container height={"90vh"} display={'flex'} alignItems={'center'} >
+      <Box fontSize="30px" mx="auto">
+        👷🏼  🚧 developing... 🚧  🐈
+      </Box>
+    </Container>
+  </>
 )
 
 export default AboutPage

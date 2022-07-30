@@ -1,15 +1,13 @@
-import { Box, ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'
 import Layout from '../components/Layout'
+import { theme } from '../lib/theme'
 
 function MyApp({ Component, pageProps }) {
   return (
 
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Layout>
-        <Box bg={'gray.100'}>
-          <Component {...pageProps} />
-
-        </Box>
+        <Component {...pageProps} />
       </Layout>
     </ChakraProvider>
   )
