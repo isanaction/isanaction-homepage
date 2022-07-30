@@ -33,7 +33,7 @@ const Layout = ({ children, title = 'Isanaction' }: Props) => (
               <Link href="/about">
                 <a>About</a>
               </Link>
-              <Link href="https://github.com/isanaction">
+              <Link href="https://github.com/isanaction/isanaction-homepage">
                 <a>
                   <Box display={'flex'} ml={2}>
                     <Image
