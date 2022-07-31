@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 const AboutPage = () => (
   <>
     <Container height={"90vh"} display={'flex'} alignItems={'center'} >
-      <Box fontSize="30px" mx="auto">
+      <Box fontSize="20px" mx="auto">
         👷🏼  🚧 developing... 🚧  🐈
       </Box>
     </Container>

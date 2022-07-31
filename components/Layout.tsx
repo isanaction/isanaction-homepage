@@ -17,7 +17,7 @@ const Layout = ({ children, title = 'Isanaction' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
-      <Box py={2} height={'5vh'} bgGradient='linear(to-r, #6495ed, gray.100)' shadow="md">
+      <Box py={2} height={'42px'} bgGradient='linear(to-r, #6495ed, gray.100)' shadow="md">
         <Container>
           <Flex>
             <Link href="/">
@@ -69,7 +69,7 @@ const Layout = ({ children, title = 'Isanaction' }: Props) => (
     </header>
     {children}
     <footer >
-      <Box h={'5vh'} py={3} textAlign={'center'} bg="white">
+      <Box h={'42px'} py={3} textAlign={'center'} bg="white">
         copyright©️ IsanaKoto
       </Box>
     </footer>
