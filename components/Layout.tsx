@@ -69,7 +69,6 @@ const Layout = ({ children, title = 'Isanaction' }: Props) => (
       <Box h={'5vh'} py={3} textAlign={'center'} bg="white">
         copyright©️ IsanaKoto
       </Box>
-      {/* <span>I'm here to stay (Footer)</span> */}
     </footer>
   </>
 )
