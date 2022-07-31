@@ -6,7 +6,7 @@ import MyImage from '../assets/img/myImage.webp'
 
 const IndexPage = () => (
   <Container height={"90vh"} display={'flex'} alignItems={'center'}>
-    <Box h={400} shadow={'md'} border={'1px'} borderColor={'gray.100'} width={'340px'} justifyContent='center' mx={'auto'} bg='white' p={5}>
+    <Box h={400} rounded="lg" shadow={'md'} border={'1px'} borderColor={'gray.100'} width={'340px'} justifyContent='center' mx={'auto'} bg='white' p={5}>
       <Center pt={5} >
         <Image
           borderRadius='full'
