@@ -26,12 +26,15 @@ const Layout = ({ children, title = 'Isanaction' }: Props) => (
               </Box>
             </Link>
             <Box flex={1}></Box>
-            <HStack fontWeight={'medium'} spacing={2} ml={5}>
+            <HStack color={'gray.600'} fontWeight={'medium'} spacing={2} >
               <Link href="/">
                 <a>Home</a>
               </Link>
               <Link href="/about">
                 <a>About</a>
+              </Link>
+              <Link href="/contact">
+                <a>Contact</a>
               </Link>
               <Link href="https://github.com/isanaction/isanaction-homepage">
                 <a>
