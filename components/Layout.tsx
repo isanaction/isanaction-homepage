@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import { Box, Container, Flex, HStack, Image, VStack } from '@chakra-ui/react'
-import Github from '../assets/icons/github.png'
+import Github from '../public/icons/github.png'
 
 type Props = {
   children?: ReactNode

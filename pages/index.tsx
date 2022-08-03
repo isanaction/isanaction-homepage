@@ -1,8 +1,8 @@
 import { Box, Center, Container, HStack, Image, VStack } from '@chakra-ui/react'
-import Twitter from '../assets/icons/twitter.png'
-import Github from '../assets/icons/github.png'
-import Facebook from '../assets/icons/facebook.png'
-import MyImage from '../assets/img/myImage.webp'
+import Twitter from '../public/icons/twitter.png'
+import Github from '../public/icons/github.png'
+import Facebook from '../public/icons/facebook.png'
+import MyImage from '../public/img/myImage.webp'
 
 const IndexPage = () => (
   <Container height={"90vh"} display={'flex'} alignItems={'center'}>
