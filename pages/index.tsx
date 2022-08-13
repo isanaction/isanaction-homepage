@@ -7,9 +7,9 @@ import { motion } from 'framer-motion'
 
 const IndexPage = () => (
   <Container height={"90vh"} display={'flex'} alignItems={'center'}>
-    <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+    <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} >
       <Stack align={'center'}>
-        <Heading as={motion.div} initial={{ x: "1000px" }}
+        <Heading as={motion.div} initial={{ x: "50px" }}
           animate={{ x: "0px " }}
         >Welcome</Heading>
       </Stack>
