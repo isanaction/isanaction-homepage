@@ -19,8 +19,10 @@ export default function FollowPointer() {
         type: "spring",
         damping: 19,
         stiffness: 50,
-        restDelta: 0.001
+        restDelta: 0.001,
       }}
-    >🐈</motion.div>
+    >
+      🐈
+    </motion.div>
   );
 }
