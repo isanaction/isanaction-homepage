@@ -13,74 +13,74 @@ import {
   useColorModeValue,
   Textarea,
   Container,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 export default function Contact() {
+  const registerUser = async (event) => {
+    event.preventDefault();
 
-  const registerUser = async event => {
-    event.preventDefault()
-
-    const res = await fetch('/api/send', {
+    const res = await fetch("/api/send", {
       body: JSON.stringify({
         email: event.target.email.value,
         name: event.target.name.value,
-        message: event.target.message.value
+        message: event.target.message.value,
       }),
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      method: 'POST'
-    })
+      method: "POST",
+    });
 
-    const result = await res.json()
-  }
+    const result = await res.json();
+  };
   return (
     <Container>
-
-      <Flex
-        minH={'90vh'}
-        align={'center'}
-        justify={'center'}>
-        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-          <Stack align={'center'}>
-            <Heading fontSize={'4xl'}>お問い合わせ</Heading>
-            <Text fontSize={'lg'} color={'gray.600'}>
+      <Flex minH={"90vh"} align={"center"} justify={"center"}>
+        <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+          <Stack align={"center"}>
+            <Heading fontSize={"4xl"}>お問い合わせ</Heading>
+            <Text fontSize={"lg"} color={"gray.600"}>
               どんなことでも聞いてください ✌️
             </Text>
           </Stack>
           <form onSubmit={registerUser}>
-
-
-            <Box
-              rounded={'lg'}
-              boxShadow={'lg'}
-              bg="white"
-              w="340px"
-              p={8}>
-
+            <Box rounded={"lg"} boxShadow={"lg"} bg="white" w="340px" p={8}>
               <Stack spacing={4}>
-
                 <FormControl id="mail">
                   <FormLabel>メールアドレス</FormLabel>
-                  <Input type="email" id="email" name="email" placeholder="name@example.com" />
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="name@example.com"
+                  />
                 </FormControl>
                 <FormControl id="name">
                   <FormLabel>お名前</FormLabel>
-                  <Input type="name" id='name' name='name' placeholder="山田たろう" />
+                  <Input
+                    type="name"
+                    id="name"
+                    name="name"
+                    placeholder="山田たろう"
+                  />
                 </FormControl>
                 <FormControl id="contact_body">
                   <FormLabel>お問い合わせ内容</FormLabel>
-                  <Textarea id="message" name="message" placeholder='ホームページを作りたいです' />
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="ホームページを作りたいです"
+                  />
                 </FormControl>
                 <Stack spacing={10}>
-
                   <Button
-                    bg={'blue.400'}
-                    color={'white'}
+                    bg={"blue.400"}
+                    color={"white"}
                     type="submit"
                     _hover={{
-                      bg: 'blue.500',
-                    }}>
+                      bg: "blue.500",
+                    }}
+                  >
                     送信
                   </Button>
                 </Stack>
