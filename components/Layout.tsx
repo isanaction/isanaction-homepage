@@ -25,7 +25,7 @@ const Layout = ({ children, title = "Isanaction" }: Props) => (
       >
         <Container>
           <Flex>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <Box
                 fontWeight={"extrabold"}
                 letterSpacing="-1px"
@@ -38,28 +38,28 @@ const Layout = ({ children, title = "Isanaction" }: Props) => (
             <Box flex={1}></Box>
             <HStack color={"gray.600"} fontWeight={"medium"} spacing={2}>
               <Link href="/">
-                <a>Home</a>
+                Home
               </Link>
               <Link href="/about">
-                <a>About</a>
+                About
               </Link>
               <Link href="/contact">
-                <a>Contact</a>
+                Contact
               </Link>
               <Link href="https://github.com/isanaction/isanaction-homepage">
-                <a>
-                  <Box display={"flex"} ml={2}>
-                    <Image
-                      borderRadius="full"
-                      my={2}
-                      w="16px"
-                      h="16px"
-                      src={Github.src}
-                      alt="Github"
-                    />
-                    <Box p={"4px"}>Source</Box>
-                  </Box>
-                </a>
+
+                <Box display={"flex"} ml={2}>
+                  <Image
+                    borderRadius="full"
+                    my={2}
+                    w="16px"
+                    h="16px"
+                    src={Github.src}
+                    alt="Github"
+                  />
+                  <Box p={"4px"}>Source</Box>
+                </Box>
+
               </Link>{" "}
               {/* |{' '}
               <Link href="/blog">
