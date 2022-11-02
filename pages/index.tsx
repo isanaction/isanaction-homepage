@@ -1,9 +1,18 @@
-import { Box, Center, Container, Heading, HStack, Image, Stack, VStack } from '@chakra-ui/react'
-import Twitter from '../public/icons/twitter.png'
-import Github from '../public/icons/github.png'
-import Facebook from '../public/icons/facebook.png'
-import MyImage from '../public/img/myImage.webp'
-import { motion } from 'framer-motion'
+import {
+  Box,
+  Center,
+  Container,
+  Heading,
+  HStack,
+  Image,
+  Stack,
+  VStack,
+} from "@chakra-ui/react";
+import Twitter from "../public/icons/twitter.png";
+import Github from "../public/icons/github.png";
+import Facebook from "../public/icons/facebook.png";
+import MyImage from "../public/img/myImage.webp";
+import { motion } from "framer-motion";
 
 const IndexPage = () => (
   <Container height={"90vh"} display={"flex"} alignItems={"center"}>

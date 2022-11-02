@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react'
-import Link from 'next/link'
-import Head from 'next/head'
-import { Box, Container, Flex, HStack, Image, VStack } from '@chakra-ui/react'
-import Github from '../public/icons/github.png'
+import React, { ReactNode } from "react";
+import Link from "next/link";
+import Head from "next/head";
+import { Box, Container, Flex, HStack, Image, VStack } from "@chakra-ui/react";
+import Github from "../public/icons/github.png";
 
 type Props = {
   children?: ReactNode;
@@ -37,17 +37,10 @@ const Layout = ({ children, title = "Isanaction" }: Props) => (
             </Link>
             <Box flex={1}></Box>
             <HStack color={"gray.600"} fontWeight={"medium"} spacing={2}>
-              <Link href="/">
-                Home
-              </Link>
-              <Link href="/about">
-                About
-              </Link>
-              <Link href="/contact">
-                Contact
-              </Link>
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
               <Link href="https://github.com/isanaction/isanaction-homepage">
-
                 <Box display={"flex"} ml={2}>
                   <Image
                     borderRadius="full"
@@ -59,7 +52,6 @@ const Layout = ({ children, title = "Isanaction" }: Props) => (
                   />
                   <Box p={"4px"}>Source</Box>
                 </Box>
-
               </Link>{" "}
               {/* |{' '}
               <Link href="/blog">
