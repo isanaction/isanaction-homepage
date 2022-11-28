@@ -1,25 +1,25 @@
-name: AWS SSM Send-Command Example
+# name: AWS SSM Send-Command Example
 
-on:
-  pull_request:
-    branches:
-      - main
+# on:
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  start:
-    runs-on: ubuntu-latest
+# jobs:
+#   start:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v2
+#     steps:
+#       - uses: actions/checkout@v2
 
-      - name: AWS SSM Send-Command
-        uses: peterkimzz/aws-ssm-send-command@master
-        id: ssm
-        with:
-          aws-region: ${{ secrets.AWS_REGION }}
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          instance-ids: ${{ secrets.INSTANCE_ID }}
+#       - name: AWS SSM Send-Command
+#         uses: peterkimzz/aws-ssm-send-command@master
+#         id: ssm
+#         with:
+#           aws-region: ${{ secrets.AWS_REGION }}
+#           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           instance-ids: ${{ secrets.INSTANCE_ID }}
 
-          working-directory: /home/ubuntu
-          command: deployer.sh
+#           working-directory: /home/ubuntu
+#           command: deployer.sh
