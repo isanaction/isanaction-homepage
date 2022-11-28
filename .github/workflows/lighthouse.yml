@@ -1,12 +1,25 @@
-name: Lighthouse
-on: [pull_request]
+name: AWS SSM Send-Command Example
+
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  lighthouse:
+  start:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@master
-      - name: Lighthouse
-        uses: foo-software/lighthouse-check-action@master
+      - uses: actions/checkout@v2
+
+      - name: AWS SSM Send-Command
+        uses: peterkimzz/aws-ssm-send-command@master
+        id: ssm
         with:
-          urls: "https://www.foo.software,https://www.google.com"
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          instance-ids: ${{ secrets.INSTANCE_ID }}
+
+          working-directory: /home/ubuntu
+          command: deployer.sh
