@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { Box, Container, Flex, HStack, Image, VStack } from "@chakra-ui/react";
-import Github from "../assets/icons/github.png";
+import Github from "../public/icons/github.png";
 
 type Props = {
   children?: ReactNode;
@@ -25,7 +25,7 @@ const Layout = ({ children, title = "Isanaction" }: Props) => (
       >
         <Container>
           <Flex>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <Box
                 fontWeight={"extrabold"}
                 letterSpacing="-1px"
@@ -37,29 +37,21 @@ const Layout = ({ children, title = "Isanaction" }: Props) => (
             </Link>
             <Box flex={1}></Box>
             <HStack color={"gray.600"} fontWeight={"medium"} spacing={2}>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/contact">Contact</Link>
               <Link href="https://github.com/isanaction/isanaction-homepage">
-                <a>
-                  <Box display={"flex"} ml={2}>
-                    <Image
-                      borderRadius="full"
-                      my={2}
-                      w="16px"
-                      h="16px"
-                      src={Github.src}
-                      alt="Github"
-                    />
-                    <Box p={"4px"}>Source</Box>
-                  </Box>
-                </a>
+                <Box display={"flex"} ml={2}>
+                  <Image
+                    borderRadius="full"
+                    my={2}
+                    w="16px"
+                    h="16px"
+                    src={Github.src}
+                    alt="Github"
+                  />
+                  <Box p={"4px"}>Source</Box>
+                </Box>
               </Link>{" "}
               {/* |{' '}
               <Link href="/blog">
